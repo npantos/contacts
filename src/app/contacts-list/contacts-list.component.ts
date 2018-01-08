@@ -39,6 +39,12 @@ export class ContactsListComponent implements OnInit {
         ];
     }
 
+    removeContact(contact){
+        console.log(contact);
+        const index = this.contacts.indexOf(contact);
+        this.contacts.splice(index, 1);
+    }
+
     ngOnInit() {
     }
 
