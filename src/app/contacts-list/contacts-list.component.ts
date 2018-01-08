@@ -1,15 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-contacts-list',
-  templateUrl: './contacts-list.component.html',
-  styleUrls: ['./contacts-list.component.css']
+    selector: 'app-contacts-list',
+    templateUrl: './contacts-list.component.html',
+    styleUrls: ['./contacts-list.component.css']
 })
 export class ContactsListComponent implements OnInit {
 
-  constructor() { }
+    contacts;
 
-  ngOnInit() {
-  }
+    constructor() {
+        this.contacts = [
+            {
+                firstName: 'John',
+                lastName: 'Doe',
+                email: 'john@example.com'
+            },
+            {
+                firstName: 'Daniel',
+                lastName: 'Ros',
+                email: 'daniel@example.com'
+            },
+            {
+                firstName: 'Martin',
+                lastName: 'Hess',
+                email: 'martin@example.com'
+            },
+            {
+                firstName: 'Petar',
+                lastName: 'Petrović',
+                email: 'martin@example.com'
+            },
+            {
+                firstName: 'Petar',
+                lastName: 'Nikolić',
+                email: 'martin@example.com'
+            }
+        ];
+    }
+
+    ngOnInit() {
+    }
 
 }
