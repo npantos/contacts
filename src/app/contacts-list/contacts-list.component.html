@@ -1,3 +1,5 @@
 <ul *ngFor="let contact of contacts">
-  <li *ngIf="contact.firstName =='Petar'">{{ contact.firstName }} {{ contact.lastName }}</li>
+  <li *ngIf="contact.firstName =='Petar' && contact.lastName=='Petrović'">
+    {{ contact.firstName }} {{ contact.lastName }} / {{ contact.email }}
+  </li>
 </ul>
