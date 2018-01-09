@@ -1,9 +1,27 @@
 <div class="container mt-5">
-<ul class="list-group" *ngFor="let contact of contacts">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
-    {{ contact.firstName }} {{ contact.lastName }} / {{ contact.email }}
 
-    <button (click)="removeContact(contact)" class="badge badge-danger badge-pill btn">x</button>
-  </li>
-</ul>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.firstName }}</td>
+      <td>{{ contact.lastName }}</td>
+      <td>{{ contact.email }}</td>
+      <td class="text-center"><button (click)="removeContact(contact)" style="cursor:pointer" class="badge badge-danger badge-pill btn">x</button></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <input type="text" name="" [(ngModel)]="testModel">
+
+  <div>Input value: {{testModel}}</div>
+
 </div>
